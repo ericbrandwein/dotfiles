@@ -1,0 +1,38 @@
+# Automatically refresh when files change.
+# I'm not sure it's working currently.
+set refresh-mode = auto
+
+# !   Run the command in the foreground with output shown.
+# @   Run the command in the background with no output.
+# +   Run the command synchronously,
+#     and echo the first line of output to the status bar.
+# ?   Prompt the user before executing the command.
+# <   Exit Tig after executing the command.
+# >   Re-open Tig instantly in the last displayed view
+#     after executing the command.
+
+# Generic bindings
+bind generic <Ctrl-R> :source ~/.tigrc
+bind generic p !git pull
+bind generic P !git push
+bind generic <Ctrl-P> !git push -u %(remote) %(repo:head)
+
+# Main bindings
+bind main ! ?@git revert %(commit)
+bind main <Ctrl-r> ?@git reset %(commit)
+
+# Status bindings
+bind status a @git add -A
+bind status A ?@git commit --amend --no-edit
+bind status D !@?rm %(file)
+## Add file to .gitignore and edit it in vim.
+bind status i !>sh -c "echo %(file) >> .gitignore && vim .gitignore"
+
+# Refs bindings
+bind refs M ?!git merge %(branch)
+bind refs C !git checkout %(branch)
+## Create a new branch
+bind refs + !git checkout -b "%(prompt Enter branch name: )"
+## Delete a branch
+bind refs ! !@?git branch -D %(branch)
+

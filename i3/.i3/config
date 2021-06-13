@@ -424,4 +424,4 @@ mode "$mode_gaps_outer" {
 }
 
 exec --no-startup-id redshift-gtk
-exec --no-stratup-id nitrogen --restore
+exec --no-startup-id nitrogen --restore

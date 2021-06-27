@@ -63,7 +63,7 @@ battery all {
         # status_bat = ""
         # status_unk = "?"
         status_unk = ""
-        status_full = ""
+        status_full = "⚡"
         # status_full = "☻"
         low_threshold = 15
         threshold_type = time

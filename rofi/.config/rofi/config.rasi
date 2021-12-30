@@ -1,5 +1,5 @@
 configuration {
 	modi: "window,run,drun";
 	scroll-method: 1;
-	theme: "/usr/share/rofi/themes/Pop-Dark.rasi";
 }
+@theme "/usr/share/rofi/themes/Pop-Dark.rasi"

@@ -67,10 +67,10 @@ bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b -f
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Shift+v exec --no-startup-id clipmenu
 
 focus_follows_mouse no
 
@@ -296,6 +296,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id volumeicon
 exec --no-startup-id i3-battery-popup
 exec --no-startup-id autorandr -c
+exec --no-startup-id clipmenud
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -335,7 +336,7 @@ bar {
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+	tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop

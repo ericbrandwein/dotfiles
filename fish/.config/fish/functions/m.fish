@@ -4,5 +4,5 @@ function m -w cd
 	else
 		z $argv
 	end
-	ls
+	and ls
 end

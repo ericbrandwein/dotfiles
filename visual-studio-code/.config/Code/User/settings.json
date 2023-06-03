@@ -1,0 +1,40 @@
+{
+    "editor.minimap.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.wordWrap": "on",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.inlineSuggest.enabled": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "explorer.confirmDelete": false,
+    "grammarly.files.include": [
+        "**/readme.md",
+        "**/README.md",
+        "**/*.txt",
+        "**/*.tex"
+    ],
+    "git.confirmSync": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "notebook.output.scrolling": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "files.autoSave": "afterDelay",
+    "latex-workshop.latex.autoBuild.interval": 2000,
+    "git.openRepositoryInParentFolders": "never",
+    "security.workspace.trust.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "none"
+}

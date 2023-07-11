@@ -15,9 +15,9 @@ default_floating_border normal
 hide_edge_borders none
 
 # change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+#bindsym $mod+u border none
+#bindsym $mod+y border pixel 1
+#bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -33,19 +33,19 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+space exec --no-startup-id rofi -show drun -show-icons
+bindsym $mod+space exec rofi -show drun -show-icons
 
 # start keepassx passwords prompt
 bindsym $mod+p exec --no-startup-id keepmenu
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
+# bindsym $mod+z exec --no-startup-id morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-bindsym $mod+m exec pavucontrol
+#bindsym $mod+m exec pavucontrol
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -57,28 +57,28 @@ bindsym $mod+m exec pavucontrol
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 2; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
+#bindsym $mod+Ctrl+b exec i3-sensible-terminal -e 'bmenu'
+#bindsym $mod+F2 exec palemoon
+#bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
+#bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+#bindsym $mod+F5 exec i3-sensible-terminal -e 'mocp'
 # bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b -f
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+#bindsym $mod+Ctrl+t exec --no-startup-id compton -b -f
+#bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
+bindsym $mod+Shift+h exec urxvt --hold -e python ~/.i3/show_help.py
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+v exec --no-startup-id clipmenu
 
 focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -87,10 +87,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -100,13 +100,13 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+# bindsym $mod+b workspace back_and_forth
+# bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $mod+h split h;exec notify-send 'Tile horizontally'
 bindsym $mod+v split v;exec notify-send 'Tile vertically'
-bindsym $mod+q split toggle
+#bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -129,11 +129,11 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+#bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+#bindsym $mod+minus scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -163,14 +163,14 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
 # Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws1
-bindsym $mod+Ctrl+2 move container to workspace $ws2
-bindsym $mod+Ctrl+3 move container to workspace $ws3
-bindsym $mod+Ctrl+4 move container to workspace $ws4
-bindsym $mod+Ctrl+5 move container to workspace $ws5
-bindsym $mod+Ctrl+6 move container to workspace $ws6
-bindsym $mod+Ctrl+7 move container to workspace $ws7
-bindsym $mod+Ctrl+8 move container to workspace $ws8
+#bindsym $mod+Ctrl+1 move container to workspace $ws1
+#bindsym $mod+Ctrl+2 move container to workspace $ws2
+#bindsym $mod+Ctrl+3 move container to workspace $ws3
+#bindsym $mod+Ctrl+4 move container to workspace $ws4
+#bindsym $mod+Ctrl+5 move container to workspace $ws5
+#bindsym $mod+Ctrl+6 move container to workspace $ws6
+#bindsym $mod+Ctrl+7 move container to workspace $ws7
+#bindsym $mod+Ctrl+8 move container to workspace $ws8
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -278,26 +278,27 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id ~/.fehbg
+# exec --no-startup-id ~/.fehbg
 #exec --no-startup-id manjaro-hello
-exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-#exec --no-startup-id clipit
-exec --no-startup-id blueman-applet
+# exec --no-startup-id nm-applet
+# exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id pamac-tray
+# exec --no-startup-id clipit
+# exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 # exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id redshift-gtk
-exec --no-startup-id nitrogen --restore
+# exec --no-startup-id redshift-gtk
+# exec --no-startup-id nitrogen --restore
 exec --no-startup-id volumeicon
 exec --no-startup-id i3-battery-popup
-exec --no-startup-id autorandr -c
+# exec --no-startup-id autorandr -c
 exec --no-startup-id clipmenud
 exec --no-startup-id dex -ae i3
+exec --no-startup-id volnoti
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -396,7 +397,7 @@ smart_borders on
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
+#bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
@@ -430,9 +431,9 @@ mode "$mode_gaps_outer" {
 }
 
 # Audio control
-#bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +10%"
-#bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -10%"
-#bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +10%; volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]+(?=%)' | head -1)"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -10%; volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]+(?=%)' | head -1)"
+bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle; if pactl get-sink-mute @DEFAULT_SINK@ | grep -q yes; then volnoti-show -m; else volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]+(?=%)' | head -1); fi"
 bindsym XF86AudioPlay exec "playerctl play-pause" 
 bindsym XF86AudioPrev exec "playerctl previous"
-bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioNext exec "playerctl next"volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]+(?=%)' | head -1)

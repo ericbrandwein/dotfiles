@@ -36,5 +36,8 @@
     "git.openRepositoryInParentFolders": "never",
     "security.workspace.trust.enabled": false,
     "explorer.confirmDragAndDrop": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "files.associations": {
+        "*.sage": "python"
+    }
 }

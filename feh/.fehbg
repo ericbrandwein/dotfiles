@@ -1,0 +1,3 @@
+#!/bin/sh
+FILE=$(find $HOME/Pictures/Wallpapers/ -iname "*.jpg" | shuf -n1)
+feh --no-fehbg --bg-fill "$FILE"

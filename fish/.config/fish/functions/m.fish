@@ -1,8 +1,12 @@
 function m -w cd
-	if test -d "$argv"
-		cd $argv
+	if count $argv > /dev/null	
+		if test -d "$argv"
+			cd $argv
+		else
+			z $argv
+		end
+		and ls
 	else
-		z $argv
+		nnn -P m
 	end
-	and ls
 end

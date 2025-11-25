@@ -288,12 +288,12 @@ exec --no-startup-id ~/.fehbg
 # exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
-exec_always --no-startup-id sbxkb
+exec --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 # exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+# exec_always --no-startup-id ff-theme-util
+# exec_always --no-startup-id fix_xcursor
 # exec --no-startup-id redshift-gtk
 # exec --no-startup-id nitrogen --restore
 exec --no-startup-id volumeicon
@@ -303,7 +303,8 @@ for_window [title="Battery Warning"] sticky enable
 exec --no-startup-id clipmenud
 exec --no-startup-id dex -ae i3
 exec --no-startup-id volnoti
-exec_always --no-startup-id setxkbmap -model pc105 -layout es,us -variant nodeadkeys,altgr-intl -option grp:shifts_toggle compose:menu
+exec --no-startup-id setxkbmap -model pc105 -layout es,en -option compose:menu -option grp:shifts_toggle
+exec --no-startup-id sh -c 'cd /home/eric/Projects/buckletray && python main.py'
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
